@@ -1,14 +1,37 @@
 import React from "react";
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  FlatList,
+  SafeAreaView,
+  Dimensions,
+} from "react-native";
 import { NewsHeader } from "../components/NewsHeader";
+import { NewsTile } from "../components/NewsTile";
+import { usePhotos } from "../hooks/usePhotos";
 
 const NewsFeedScreen = () => {
-    return (
-        <SafeAreaView>
-            <NewsHeader />
-            <Text>NewsFeedScreen</Text>
-        </SafeAreaView>
-    );
+  const photos = usePhotos();
+  const windowWidth = Dimensions.get("window").width;
+
+  return (
+    <SafeAreaView>
+      <NewsHeader />
+      <FlatList
+        data={photos}
+        numColumns={1}
+        renderItem={({ item }) => (
+          <NewsTile
+            id={item.id}
+            title={item.title}
+            url={item.thumbnailUrl}
+            tileSize={windowWidth}
+          />
+        )}
+        keyExtractor={(item) => item.id.toString()}
+      />
+    </SafeAreaView>
+  );
 };
 
 export default NewsFeedScreen;

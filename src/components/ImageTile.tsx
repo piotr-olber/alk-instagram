@@ -1,17 +1,40 @@
-import { View, Text, Image, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet,
+  Pressable,
+  Modal,
+  SafeAreaView,
+} from "react-native";
+import { usePhotoById } from "../hooks/usePhotoById";
 
-type Props = {
-    url: string;
-    tileSize: number;
+import { Photo } from "../hooks/Types";
+
+type ImageTileProps = {
+  id: number;
+  url: string;
+  tileSize: number;
+  openModal: (photo: Photo) => void;
 };
 
-export const ImageTile = ({ url, tileSize }: Props) => {
-    return (
+export const ImageTile = ({ id, url, tileSize, openModal }: ImageTileProps) => {
+  const photo = usePhotoById(id);
+
+  const handleImagePress = () => {
+    openModal(photo);
+  };
+
+  return (
+    <>
+      <Pressable onPress={handleImagePress}>
         <Image
-            source={{
-                uri: url,
-            }}
-            style={{ width: tileSize, height: tileSize }}
+          source={{
+            uri: url,
+          }}
+          style={{ width: tileSize, height: tileSize }}
         />
-    );
+      </Pressable>
+    </>
+  );
 };

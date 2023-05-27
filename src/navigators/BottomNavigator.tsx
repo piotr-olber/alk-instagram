@@ -15,6 +15,7 @@ const BottomNavigator = () => {
                 component={NewsFeedScreen}
                 options={{
                     headerShown: false,
+                    tabBarShowLabel: false,
                     tabBarLabel: "News Feed",
                     tabBarIcon: ({ color, size }) => (
                         <Foundation name="home" size={size} color={color} />
@@ -26,6 +27,7 @@ const BottomNavigator = () => {
                 component={SearchScreen}
                 options={{
                     headerShown: false,
+                    tabBarShowLabel: false,
                     tabBarLabel: "Search",
                     tabBarIcon: ({ color, size }) => (
                         <AntDesign name="search1" size={size} color={color} />
