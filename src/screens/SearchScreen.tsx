@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ImageModalScreen } from "../screens/ImageModalSereen";
-import { StyleSheet, Text, View, FlatList } from "react-native";
+import { StyleSheet, FlatList } from "react-native";
 import { Dimensions } from "react-native";
 import { SearchBar } from "@rneui/themed";
 import { SafeAreaView } from "react-native";

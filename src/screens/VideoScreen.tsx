@@ -1,9 +1,4 @@
-import {
-    Text,
-    SafeAreaView,
-    StyleSheet,
-    Dimensions,
-} from "react-native";
+import { Text, SafeAreaView, StyleSheet, Dimensions } from "react-native";
 
 const VideoScreen = () => {
     return (

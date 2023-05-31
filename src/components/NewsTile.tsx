@@ -25,13 +25,3 @@ export const NewsTile = ({ id, url, tileSize, title }: NewsTileProps) => {
     );
 };
 
-// const styles = StyleSheet.create({
-//   tileHeader: {
-//     flexDirection: "row",
-//     alignItems: "center",
-//     justifyContent: "space-between",
-//     backgroundColor: "black",
-//     paddingTop: 20,
-//     paddingBottom: 20,
-//   },
-// });

@@ -9,12 +9,9 @@ type SpinnerProviderProps = {
 export const SpinnerProvider = ({ children }: SpinnerProviderProps) => {
     const [isAnimating, setIsAnimating] = useState<boolean>(false);
 
-    // const contextValue = useCallback((active: boolean): void => {
-    //     setIsAnimating(active);
-    // }, []);
-    const contextValue = (active: boolean): void => {
+    const contextValue = useCallback((active: boolean): void => {
         setIsAnimating(active);
-    };
+    }, []);
 
     return (
         <SpinnerContext.Provider value={contextValue}>

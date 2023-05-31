@@ -1,11 +1,8 @@
 import React from "react";
 import {
-    StyleSheet,
-    View,
     FlatList,
     SafeAreaView,
     Dimensions,
-    ActivityIndicator,
 } from "react-native";
 import { useIsFetching } from "@tanstack/react-query";
 import { NewsHeader } from "../components/NewsHeader";

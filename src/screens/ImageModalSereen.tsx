@@ -64,7 +64,6 @@ const styles = StyleSheet.create({
     },
     closeButton: {
         color: "white",
-        // fontSize: 20,
         fontWeight: "bold",
     },
     imageContainer: {

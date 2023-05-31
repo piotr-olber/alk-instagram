@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: "black",
-        height: Dimensions.get("window").height-90,
+        height: Dimensions.get("window").height - 90,
     },
     text: {
         color: "white",
