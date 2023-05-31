@@ -4,25 +4,25 @@ import { NewsTileHeader } from "./NewsTileHeader";
 import { NewsTileFooter } from "./NewsTileFooter";
 
 type NewsTileProps = {
-  id: number;
-  title: string;
-  url: string;
-  tileSize: number;
+    id: number;
+    title: string;
+    url: string;
+    tileSize: number;
 };
 
 export const NewsTile = ({ id, url, tileSize, title }: NewsTileProps) => {
-  return (
-    <View>
-      <NewsTileHeader userName={title.substring(1, title.indexOf(" "))} />
-      <Image
-        source={{
-          uri: url,
-        }}
-        style={{ width: tileSize, height: tileSize }}
-      />
-      <NewsTileFooter tileText={title} id={id} />
-    </View>
-  );
+    return (
+        <View>
+            <NewsTileHeader userName={title.substring(1, title.indexOf(" "))} />
+            <Image
+                source={{
+                    uri: url,
+                }}
+                style={{ width: tileSize, height: tileSize }}
+            />
+            <NewsTileFooter tileText={title} id={id} />
+        </View>
+    );
 };
 
 // const styles = StyleSheet.create({
