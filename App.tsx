@@ -7,6 +7,7 @@ import { useFonts } from "expo-font";
 
 import BottomNavigator from "./src/navigators/BottomNavigator";
 import { photoQueryClient } from "./src/hooks/PhotosQueryClient";
+import { SpinnerProvider } from "./src/SpinnerProvider/SpinnerProvider";
 
 export default function App() {
     const [fontsLoaded] = useFonts({
@@ -18,7 +19,9 @@ export default function App() {
     return (
         <NavigationContainer>
             <QueryClientProvider client={photoQueryClient}>
-                <BottomNavigator />
+                <SpinnerProvider>
+                    <BottomNavigator />
+                </SpinnerProvider>
             </QueryClientProvider>
         </NavigationContainer>
     );
